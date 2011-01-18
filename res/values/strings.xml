@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, timer!</string>
-    <string name="app_name">trains</string>
+    <string name="app_name">Beat the TRAINS..!!</string>
+<string-array name="day_array"><item>Weekday</item>
+<item>Sunday</item>
+</string-array>
+<string name="day_prompt">Choose Week day or Sunday.</string>
+<string name="train_timings">Train timings.</string>
+<string name="station">Select your Station.</string>
 </resources>
