@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Beat the TRAINS..!!</string>
-<string-array name="day_array"><item>Weekday</item>
+<string-array name="day_array"><item>Default</item>
+<item>Weekday</item>
 <item>Sunday</item>
 </string-array>
 <string name="day_prompt">Choose Week day or Sunday.</string>
 <string name="train_timings">Train timings.</string>
 <string name="station">Select your Station.</string>
+<string-array name="stations"><item>Velacherry</item>
+<item>Perungudi</item>
+<item>Tharamani</item>
+<item>Thiruvanmiyur</item>
+<item>Indira Nagar</item>
+<item>Kasthurba Nagar</item>
+<item>Kotturpuram</item>
+<item>Greenways Road</item>
+<item>Mandaveli</item>
+<item>Thirumayilai</item>
+<item>Light House</item>
+<item>Chepak</item>
+<item>Chintadripet</item>
+<item>Park Town</item>
+<item>Chennai Fort</item>
+<item>Chennai Beach</item></string-array>
+
+<string name="train_up">Velacherry - Chennai Beach ---&gt;</string>
+<string name="train_down">Chennai Beach - Velacherry ---&gt;</string>
+<string name="train_upTime"></string>
+<string name="train_downTime"></string>
 </resources>

@@ -10,6 +10,7 @@ package com.androidapp;
 public final class R {
     public static final class array {
         public static final int day_array=0x7f050000;
+        public static final int stations=0x7f050001;
     }
     public static final class attr {
     }
@@ -17,16 +18,15 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int ListView01=0x7f060009;
         public static final int autocomplete_country=0x7f060005;
         public static final int btn=0x7f060006;
         public static final int dateDisplay=0x7f060000;
-        public static final int edit=0x7f060008;
         public static final int pickDate=0x7f060001;
         public static final int pickTime=0x7f060003;
         public static final int spinner=0x7f060004;
-        public static final int text=0x7f060007;
         public static final int timeDisplay=0x7f060002;
+        public static final int train_downTime=0x7f060008;
+        public static final int train_upTime=0x7f060007;
     }
     public static final class layout {
         public static final int list_item=0x7f030000;
@@ -37,6 +37,10 @@ public final class R {
         public static final int app_name=0x7f040000;
         public static final int day_prompt=0x7f040001;
         public static final int station=0x7f040003;
+        public static final int train_down=0x7f040005;
+        public static final int train_downTime=0x7f040007;
         public static final int train_timings=0x7f040002;
+        public static final int train_up=0x7f040004;
+        public static final int train_upTime=0x7f040006;
     }
 }

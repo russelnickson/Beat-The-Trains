@@ -23,7 +23,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 
 public class timer extends Activity {
     /** Called when the activity is first created. */
-	static final String[] COUNTRIES = new String[] {
+	static final String[] stations = new String[] {
 		  "Velacherry", "Perungudi", "Tharamani", "Thiruvanmiyur", "Indira Nagar",
 		  "Kasthurba Nagar", "Kotturpuram", "Greenways Road", "Mandaveli", "Thirumayilai",
 		  "Light House", "Chepak", "Chintadripet", "Park Town",
@@ -34,6 +34,7 @@ public class timer extends Activity {
 	private int mYear;
 	private int mMonth;
 	private int mDay;
+	private int mDay_of_week;
     static final int DATE_DIALOG_ID = 0;
     private void updateDisplayDate() {
         mDateDisplay.setText(
@@ -105,7 +106,7 @@ public class timer extends Activity {
         mYear = c.get(Calendar.YEAR);
         mMonth = c.get(Calendar.MONTH);
         mDay = c.get(Calendar.DAY_OF_MONTH);
-
+        mDay_of_week = c.get(Calendar.DAY_OF_WEEK);
         // display the current date (this method is below)
         updateDisplayDate();
         
@@ -135,7 +136,7 @@ public class timer extends Activity {
 	    spinner.setAdapter(adapter);
 	    
 	    AutoCompleteTextView textView1 = (AutoCompleteTextView) findViewById(R.id.autocomplete_country);
-	    ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, R.layout.list_item, COUNTRIES);
+	    ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, R.layout.list_item,stations);
 	    textView1.setAdapter(adapter1);
 	    
 	    final Button button= (Button) this.findViewById(R.id.btn);
@@ -144,6 +145,14 @@ public class timer extends Activity {
         	public void onClick(View v) {
         	if(v==button) {
         		Intent myIntent = new Intent(timer.this, widgets.class);
+        		Bundle b = new Bundle();
+        		
+        		b.putInt("day",mDay_of_week);  
+        		b.putInt("hour",mHour); 
+        		b.putInt("min",mMinute);
+        		
+                //Add the set of extended data to the intent and start it
+                myIntent.putExtras(b);
     		    timer.this.startActivity(myIntent);        		
         	}
         	}

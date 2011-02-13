@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-<TextView  
-	android:id="@+id/text"
-    android:layout_width="wrap_content" 
-    android:layout_height="wrap_content" 
-    android:text="@string/train_timings"
-    />
+    android:stretchColumns="1">
+    <TableRow>
+        
+        <TextView
+            android:text="@string/train_timings"
+            android:gravity="right"
+            android:padding="3dip" />
+            <TextView
+            android:text=" "
+            android:padding="3dip" />
+    </TableRow>
+    
+    <TableRow>
+        <TextView
+            android:text="@string/train_up"
+            android:padding="3dip" />
+        <TextView
+            android:id="@+id/train_upTime"
+            android:gravity="right"
+            android:padding="3dip" />
+    </TableRow>
 
-<EditText android:text="hi" android:id="@+id/edit" android:layout_width="wrap_content" android:layout_height="wrap_content"></EditText>
-<Button android:text="set text" android:id="@+id/btn" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-<ListView android:id="@+id/ListView01" android:layout_width="wrap_content" android:layout_height="wrap_content"></ListView>
-
-</LinearLayout>
+    <TableRow>
+        <TextView
+            android:text="@string/train_down"
+            android:padding="3dip" />
+        <TextView
+            android:id="@+id/train_downTime"
+            android:gravity="right"
+            android:padding="3dip" />
+    </TableRow>
+</TableLayout>
